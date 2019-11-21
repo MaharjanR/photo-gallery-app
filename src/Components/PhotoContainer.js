@@ -4,8 +4,7 @@ import SearchNotFound from './SearchNotFound';
 
 const PhotoContainer = props => {
 
-    // const length = props.photo.length;
-    const length = 0;
+    const length = props.photo.length;
     let result;
 
     if( length > 0 ){
