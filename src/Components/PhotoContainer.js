@@ -1,47 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Photo from './Photo';
 import SearchNotFound from './SearchNotFound';
 
-class PhotoContainer extends Component {
+const PhotoContainer = props => {
 
-    renderPhoto = () => {
-        const length = this.props.photo.length;
-        let photoArr = [];
+    // const length = props.photo.length;
+    const length = 0;
+    let result;
 
-        if( length > 0 ){
-            const url = this.props.photo.map( url => `https://farm${url.farm}.staticflickr.com/${url.server}/${url.id}_${url.secret}.jpg`);
-            const id =  this.props.photo.map( url => `${url.id}`);
-            const tempPhoto = [];
-
-            photoArr.push(<h2>Results</h2>);
-
-            for( let i = 0; i < length; i++){
-                tempPhoto.push(
-                    <Photo 
-                    url={url[i]} 
-                    key={id[i]} />
-                );
-            }
-            photoArr.push(<ul>{ tempPhoto }</ul>);
-            // photoArr.map( value => {
-            //     <Photo url={value} key={} />
-            // })
+    if( length > 0 ){
+        const results = props.photo;
+        console.log(results);
+        if(results){
+            result = results.map( photo => {
+                return <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />
+            });
         }
-
-        else{
-            photoArr.push(<SearchNotFound />);
-        }
-
-        return photoArr;
+        
     }
 
-    render(){        
-        return(
-            <div className="photo-container">
-                { this.renderPhoto() }
-            </div>
-        );
+    else{
+        result = <SearchNotFound />;
     }
+    
+
+    return(
+        <div className="photo-container">
+            <h2>Results</h2>
+            <ul>
+                {result}
+            </ul>
+        </div>
+    );
 }
 
 export default PhotoContainer;

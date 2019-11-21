@@ -8,6 +8,6 @@ const Photo = (props) => {
             <img src={`${props.url}`} alt="" />
         </li>
     );
-}
+}   
 
 export default Photo;
