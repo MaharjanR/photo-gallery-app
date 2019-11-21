@@ -9,19 +9,16 @@ const PhotoContainer = props => {
 
     if( length > 0 ){
         const results = props.photo;
-        console.log(results);
         if(results){
             result = results.map( photo => {
                 return <Photo url={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id} />
             });
         }
-        
     }
 
     else{
         result = <SearchNotFound />;
     }
-    
 
     return(
         <div className="photo-container">

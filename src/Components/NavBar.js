@@ -5,9 +5,10 @@ const NavBar = () => {
     return(
         <nav className="main-nav">
         <ul>
-          <li><NavLink to='#'>Cats</NavLink></li>
-          <li><NavLink to='#'>Dogs</NavLink></li>
-          <li><NavLink to='#'>Computers</NavLink></li>
+          <li><NavLink exact to='./'>Search</NavLink></li>
+          <li><NavLink to='./cats'>Cats</NavLink></li>
+          <li><NavLink to='./dogs'>Dogs</NavLink></li>
+          <li><NavLink to='./rabbit'>Rabbit</NavLink></li>
         </ul>
       </nav>
     );
