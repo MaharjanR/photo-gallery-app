@@ -73,6 +73,7 @@ class App extends Component{
   performSearch = ( query = 'sparrow') => {
     
     const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=24&format=json&nojsoncallback=1`;
+    this.setState({ loading: true });
 
     axios.get(url)
     .then( (response) => {
@@ -89,7 +90,6 @@ class App extends Component{
   }
 
   render(){
-    console.log(this.state);
     return (
       <div className="container">
         <BrowserRouter>
@@ -100,9 +100,10 @@ class App extends Component{
             :
             <Switch>
             <Route exact path="/" render={ () => <PhotoContainer photo={ this.state.data } />} />
-            <Route path="/cats" render={ () => <PhotoContainer photo={ this.state.cat } />} />
-            <Route path="/dogs" render={ () => <PhotoContainer photo={ this.state.dog } />} />
-            <Route path="/rabbit" render={ () => <PhotoContainer photo={ this.state.rabbit } />} />
+            <Route exact path="/cats" render={ () => <PhotoContainer photo={ this.state.cat } />} />
+            <Route exact path="/dogs" render={ () => <PhotoContainer photo={ this.state.dog } />} />
+            <Route exact path="/rabbit" render={ () => <PhotoContainer photo={ this.state.rabbit } />} />
+            <Route exact path="/:query" render={ () => <PhotoContainer photo={ this.state.data } />} />
             <Route render={ () => <NotFound />} />
           </Switch>
           }
