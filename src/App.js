@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { 
-  BrowserRouter,
+  HashRouter,
   Switch,
   Route  
 } from 'react-router-dom';
@@ -26,9 +26,6 @@ class App extends Component{
   componentDidMount(){
     this.performSearch();
 
-    // this.setState({
-    //   cat: this.performSearch('cats')
-    // })
 
     axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=cats&per_page=24&format=json&nojsoncallback=1`)
     .then( (response) => {
@@ -92,7 +89,7 @@ class App extends Component{
   render(){
     return (
       <div className="container">
-        <BrowserRouter>
+        <HashRouter basename="/react-app">
           <SearchForm search={ this.performSearch } />
           <NavBar />
           { (this.state.loading) ?
@@ -107,7 +104,7 @@ class App extends Component{
             <Route render={ () => <NotFound />} />
           </Switch>
           }
-        </BrowserRouter>
+        </HashRouter>
       </div>
     );
   }
