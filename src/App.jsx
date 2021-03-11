@@ -21,53 +21,53 @@ class App extends Component {
     componentDidMount() {
         this.performSearch();
 
-        // axios
-        //     .get(
-        //         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=cats&per_page=24&format=json&nojsoncallback=1`
-        //     )
-        //     .then((response) => {
-        //         // handle success
-        //         this.setState({
-        //             cat: response.data.photos.photo.map((photo) => photo),
-        //             loading: false,
-        //         });
-        //     })
-        //     .catch(function (error) {
-        //         // handle error
-        //         console.log(error);
-        //     });
+        axios
+            .get(
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=cats&per_page=24&format=json&nojsoncallback=1`
+            )
+            .then((response) => {
+                // handle success
+                this.setState({
+                    cat: response.data.photos.photo.map((photo) => photo),
+                    loading: false,
+                });
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            });
 
-        // axios
-        //     .get(
-        //         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=dogs&per_page=24&format=json&nojsoncallback=1`
-        //     )
-        //     .then((response) => {
-        //         // handle success
-        //         this.setState({
-        //             dog: response.data.photos.photo.map((photo) => photo),
-        //             loading: false,
-        //         });
-        //     })
-        //     .catch(function (error) {
-        //         // handle error
-        //         console.log(error);
-        //     });
+        axios
+            .get(
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=dogs&per_page=24&format=json&nojsoncallback=1`
+            )
+            .then((response) => {
+                // handle success
+                this.setState({
+                    dog: response.data.photos.photo.map((photo) => photo),
+                    loading: false,
+                });
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            });
 
-        // axios
-        //     .get(
-        //         `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=rabbit&per_page=24&format=json&nojsoncallback=1`
-        //     )
-        //     .then((response) => {
-        //         // handle success
-        //         this.setState({
-        //             rabbit: response.data.photos.photo.map((photo) => photo),
-        //             loading: false,
-        //         });
-        //     })
-        //     .catch(function (error) {
-        //         // handle error
-        //         console.log(error);
-        //     });
+        axios
+            .get(
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=rabbit&per_page=24&format=json&nojsoncallback=1`
+            )
+            .then((response) => {
+                // handle success
+                this.setState({
+                    rabbit: response.data.photos.photo.map((photo) => photo),
+                    loading: false,
+                });
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            });
     }
 
     performSearch = (query = "sparrow") => {
