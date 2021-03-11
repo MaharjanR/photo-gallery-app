@@ -1,22 +1,14 @@
 {
-  "files": {
-    "main.css": "/react-app/static/css/main.e3a5d5b3.chunk.css",
-    "main.js": "/react-app/static/js/main.df4feec5.chunk.js",
-    "main.js.map": "/react-app/static/js/main.df4feec5.chunk.js.map",
-    "runtime-main.js": "/react-app/static/js/runtime-main.56efc31c.js",
-    "runtime-main.js.map": "/react-app/static/js/runtime-main.56efc31c.js.map",
-    "static/js/2.74e12a43.chunk.js": "/react-app/static/js/2.74e12a43.chunk.js",
-    "static/js/2.74e12a43.chunk.js.map": "/react-app/static/js/2.74e12a43.chunk.js.map",
-    "index.html": "/react-app/index.html",
-    "precache-manifest.fc7b832283f646c1b23f272e9697cf07.js": "/react-app/precache-manifest.fc7b832283f646c1b23f272e9697cf07.js",
-    "service-worker.js": "/react-app/service-worker.js",
-    "static/css/main.e3a5d5b3.chunk.css.map": "/react-app/static/css/main.e3a5d5b3.chunk.css.map",
-    "static/media/errorImg.jpg": "/react-app/static/media/errorImg.dff0fa0a.jpg"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.56efc31c.js",
-    "static/js/2.74e12a43.chunk.js",
-    "static/css/main.e3a5d5b3.chunk.css",
-    "static/js/main.df4feec5.chunk.js"
-  ]
+  "main.css": "/photo-gallery-app/static/css/main.cc0953d2.chunk.css",
+  "main.js": "/photo-gallery-app/static/js/main.4524f2c1.chunk.js",
+  "main.js.map": "/photo-gallery-app/static/js/main.4524f2c1.chunk.js.map",
+  "runtime~main.js": "/photo-gallery-app/static/js/runtime~main.751dc7f6.js",
+  "runtime~main.js.map": "/photo-gallery-app/static/js/runtime~main.751dc7f6.js.map",
+  "static/js/2.8384a857.chunk.js": "/photo-gallery-app/static/js/2.8384a857.chunk.js",
+  "static/js/2.8384a857.chunk.js.map": "/photo-gallery-app/static/js/2.8384a857.chunk.js.map",
+  "index.html": "/photo-gallery-app/index.html",
+  "precache-manifest.e073a0330bdecb0bd62acf88baeed352.js": "/photo-gallery-app/precache-manifest.e073a0330bdecb0bd62acf88baeed352.js",
+  "service-worker.js": "/photo-gallery-app/service-worker.js",
+  "static/css/main.cc0953d2.chunk.css.map": "/photo-gallery-app/static/css/main.cc0953d2.chunk.css.map",
+  "static/media/errorImg.jpg": "/photo-gallery-app/static/media/errorImg.dff0fa0a.jpg"
 }
