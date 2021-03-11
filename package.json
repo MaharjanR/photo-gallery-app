@@ -2,10 +2,10 @@
     "name": "react-gallery-app",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://catalight.github.io/photo-gallery-app",
+    "homepage": "https://maharjanr.github.io/photo-gallery-app",
     "dependencies": {
         "axios": "^0.21.1",
-        "gh-pages": "^2.1.1",
+        "gh-pages": "^2.2.0",
         "history": "^4.10.1",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
