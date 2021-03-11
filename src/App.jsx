@@ -23,7 +23,7 @@ class App extends Component {
 
         axios
             .get(
-                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=cats&per_page=24&format=json&nojsoncallback=1`
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey.apiKey}&tags=cats&per_page=24&format=json&nojsoncallback=1`
             )
             .then((response) => {
                 // handle success
@@ -39,7 +39,7 @@ class App extends Component {
 
         axios
             .get(
-                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=dogs&per_page=24&format=json&nojsoncallback=1`
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey.apiKey}&tags=dogs&per_page=24&format=json&nojsoncallback=1`
             )
             .then((response) => {
                 // handle success
@@ -55,7 +55,7 @@ class App extends Component {
 
         axios
             .get(
-                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=rabbit&per_page=24&format=json&nojsoncallback=1`
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey.apiKey}&tags=rabbit&per_page=24&format=json&nojsoncallback=1`
             )
             .then((response) => {
                 // handle success
